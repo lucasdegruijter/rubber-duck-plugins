@@ -1,0 +1,12 @@
+# dependencies
+node_modules/
+
+# build artifacts
+dist/
+*.duckplug
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+*.log

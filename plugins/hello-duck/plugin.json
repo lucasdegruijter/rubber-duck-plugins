@@ -1,0 +1,13 @@
+{
+  "$schema": "../../schemas/plugin.schema.json",
+  "id": "hello-duck",
+  "name": "Hello Duck",
+  "version": "1.0.0",
+  "description": "Minimal example plugin — a template for building your own Rubber Duck plugin.",
+  "author": "Rubber Duck",
+  "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/hello-duck",
+  "hostApiVersion": 1,
+  "categories": ["fun"],
+  "ui": { "entry": "ui/index.html" },
+  "permissions": []
+}

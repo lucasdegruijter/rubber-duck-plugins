@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/lucasdegruijter/rubber-duck-plugins/schemas/index.schema.json",
+  "title": "Rubber Duck plugin registry index",
+  "description": "The catalog (index.json) the Rubber Duck app fetches to discover installable plugins.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["indexVersion", "generatedAt", "plugins"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "indexVersion": {
+      "type": "integer",
+      "description": "Format version of this index document.",
+      "const": 1
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp when the index was last regenerated."
+    },
+    "plugins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "name", "description", "author", "latest", "versions"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$" },
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "author": { "type": "string" },
+          "homepage": { "type": "string", "format": "uri" },
+          "icon": {
+            "type": "string",
+            "description": "URL to the plugin icon (release asset or repo raw URL)."
+          },
+          "categories": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+          },
+          "latest": {
+            "type": "string",
+            "description": "Version string of the newest entry in versions[].",
+            "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+          },
+          "versions": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["version", "hostApiVersion", "package", "publishedAt"],
+              "properties": {
+                "version": {
+                  "type": "string",
+                  "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+                },
+                "hostApiVersion": { "type": "integer", "minimum": 1 },
+                "publishedAt": { "type": "string", "format": "date-time" },
+                "platforms": {
+                  "type": "array",
+                  "description": "Platforms with a sidecar in this version; omitted/empty means UI-only.",
+                  "items": {
+                    "type": "string",
+                    "enum": ["macos-arm64", "macos-x64", "windows-x64", "linux-x64"]
+                  },
+                  "uniqueItems": true
+                },
+                "package": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["url", "sha256", "size"],
+                  "properties": {
+                    "url": {
+                      "type": "string",
+                      "format": "uri",
+                      "description": "Download URL of the .duckplug package (GitHub release asset)."
+                    },
+                    "sha256": {
+                      "type": "string",
+                      "description": "Lowercase hex SHA-256 of the .duckplug package.",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    "size": {
+                      "type": "integer",
+                      "description": "Package size in bytes.",
+                      "minimum": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

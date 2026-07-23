@@ -1,0 +1,17 @@
+{
+  "name": "rubber-duck-plugins",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Plugin registry for Rubber Duck — the cross-platform devtool host.",
+  "scripts": {
+    "validate": "node tools/validate.mjs",
+    "pack:plugin": "node tools/pack.mjs",
+    "build:index": "node tools/build-index.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

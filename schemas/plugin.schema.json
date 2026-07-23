@@ -1,0 +1,95 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/lucasdegruijter/rubber-duck-plugins/schemas/plugin.schema.json",
+  "title": "Rubber Duck plugin manifest",
+  "description": "Manifest (plugin.json) that lives at the root of every Rubber Duck plugin package (.duckplug).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "version", "description", "author", "hostApiVersion"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "type": "string",
+      "description": "Stable unique identifier, kebab-case. Used for install dir, settings namespace, and IPC origin.",
+      "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$",
+      "minLength": 2,
+      "maxLength": 64
+    },
+    "name": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "version": {
+      "type": "string",
+      "description": "Semantic version of this plugin release.",
+      "pattern": "^\\d+\\.\\d+\\.\\d+(?:-[0-9A-Za-z.-]+)?(?:\\+[0-9A-Za-z.-]+)?$"
+    },
+    "description": { "type": "string", "minLength": 1, "maxLength": 280 },
+    "author": { "type": "string", "minLength": 1 },
+    "homepage": { "type": "string", "format": "uri" },
+    "icon": {
+      "type": "string",
+      "description": "Path to an icon within the package (png/svg), relative to the manifest."
+    },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["development", "productivity", "hardware", "monitoring", "utilities", "fun"]
+      },
+      "uniqueItems": true
+    },
+    "hostApiVersion": {
+      "type": "integer",
+      "description": "Major version of the host plugin API this plugin targets. The host refuses incompatible plugins.",
+      "minimum": 1
+    },
+    "ui": {
+      "type": "object",
+      "description": "Web-bundle UI shipped with the plugin, served over the plugin:// protocol.",
+      "additionalProperties": false,
+      "required": ["entry"],
+      "properties": {
+        "entry": {
+          "type": "string",
+          "description": "Entry HTML file within the package, e.g. ui/index.html.",
+          "pattern": "^[^/].*\\.html$"
+        }
+      }
+    },
+    "sidecars": {
+      "type": "array",
+      "description": "Per-platform native executables the host spawns and talks to over JSON-RPC (stdio).",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["platform", "path", "sha256"],
+        "properties": {
+          "platform": {
+            "type": "string",
+            "enum": ["macos-arm64", "macos-x64", "windows-x64", "linux-x64"]
+          },
+          "path": {
+            "type": "string",
+            "description": "Path to the executable within the package, relative to the manifest."
+          },
+          "sha256": {
+            "type": "string",
+            "description": "Lowercase hex SHA-256 of the executable, verified after unpack.",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "permissions": {
+      "type": "array",
+      "description": "Host capabilities the plugin requests (advisory for now; enforced later).",
+      "items": {
+        "type": "string",
+        "enum": ["notifications", "tray", "settings", "network", "usb", "shell"]
+      },
+      "uniqueItems": true
+    },
+    "settingsSchema": {
+      "type": "object",
+      "description": "Optional JSON-schema describing this plugin's settings, rendered by the host."
+    }
+  }
+}
