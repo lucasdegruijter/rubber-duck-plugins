@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-23T13:23:04.900Z",
+  "generatedAt": "2026-07-23T15:05:31.896Z",
   "plugins": [
     {
       "id": "hello-duck",
@@ -22,6 +22,38 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/hello-duck-v1.0.0/hello-duck-1.0.0.duckplug",
             "sha256": "fc793d9b4b4232c21c18f36ce0de3132d5f9d8ae4380bfed97e131cd05bbe288",
             "size": 1305
+          }
+        }
+      ]
+    },
+    {
+      "id": "linak-desk",
+      "name": "LINAK Desk",
+      "description": "Control your LINAK sit/stand desk with keyboard shortcuts and sit/stand reminders.",
+      "author": "Rubber Duck",
+      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/linak-desk",
+      "categories": [
+        "productivity",
+        "hardware"
+      ],
+      "longDescription": "**LINAK Desk** brings your sit/stand desk into Rubber Duck, so you can raise or lower it without reaching for the panel under the desk.\n\n### Highlights\n\n- **One-key sit/stand** — bind a global keyboard shortcut to toggle between your saved sitting and standing heights from anywhere.\n- **Saved presets** — capture your favourite sitting and standing heights once, then move to them precisely every time.\n- **Live height readout** — a compact panel shows the current height and posture as the desk moves.\n- **Nudge controls** — fine-tune the height up or down in small steps.\n- **Posture reminders** — optional, gentle nudges to stand up (or sit back down) after a configurable interval, with a one-click action to move right away.\n\n### Setup\n\nConnect your LINAK desk over USB, open the panel, and save your sitting and standing heights. Then assign a global shortcut in Rubber Duck's shortcut settings to toggle sit/stand from any app.\n\nEverything runs locally over USB-HID — no network access and no accounts.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc1.png",
+        "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc2.png"
+      ],
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-23T14:32:37.784Z",
+          "platforms": [
+            "macos-arm64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/linak-desk-v0.1.0/linak-desk-0.1.0.duckplug",
+            "sha256": "73c65f09b57bdbb167a3ba8860b64dcada65ae0a946705a392129fc4eb244f67",
+            "size": 1887913
           }
         }
       ]

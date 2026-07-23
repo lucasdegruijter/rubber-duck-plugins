@@ -71,6 +71,26 @@
         }
       }
     },
+    "actions": {
+      "type": "array",
+      "description": "Bindable actions the plugin exposes for global shortcuts. Triggering an action calls the sidecar method named by `id` with empty params.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Sidecar method invoked when the action fires.",
+            "pattern": "^[a-z][a-z0-9_]*$",
+            "minLength": 1,
+            "maxLength": 64
+          },
+          "label": { "type": "string", "minLength": 1, "maxLength": 64 }
+        }
+      },
+      "uniqueItems": true
+    },
     "sidecars": {
       "type": "array",
       "description": "Per-platform native executables the host spawns and talks to over JSON-RPC (stdio).",

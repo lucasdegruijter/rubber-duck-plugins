@@ -1,0 +1,8 @@
+{
+  "$schema": "../../schemas/store.schema.json",
+  "screenshots": [
+    "screenshots/sc1.png",
+    "screenshots/sc2.png"
+  ],
+  "longDescription": "**LINAK Desk** brings your sit/stand desk into Rubber Duck, so you can raise or lower it without reaching for the panel under the desk.\n\n### Highlights\n\n- **One-key sit/stand** — bind a global keyboard shortcut to toggle between your saved sitting and standing heights from anywhere.\n- **Saved presets** — capture your favourite sitting and standing heights once, then move to them precisely every time.\n- **Live height readout** — a compact panel shows the current height and posture as the desk moves.\n- **Nudge controls** — fine-tune the height up or down in small steps.\n- **Posture reminders** — optional, gentle nudges to stand up (or sit back down) after a configurable interval, with a one-click action to move right away.\n\n### Setup\n\nConnect your LINAK desk over USB, open the panel, and save your sitting and standing heights. Then assign a global shortcut in Rubber Duck's shortcut settings to toggle sit/stand from any app.\n\nEverything runs locally over USB-HID — no network access and no accounts."
+}

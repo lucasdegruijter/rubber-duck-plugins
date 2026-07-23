@@ -1,0 +1,53 @@
+{
+  "$schema": "../../schemas/plugin.schema.json",
+  "id": "linak-desk",
+  "name": "LINAK Desk",
+  "version": "0.1.0",
+  "description": "Control your LINAK sit/stand desk with keyboard shortcuts and sit/stand reminders.",
+  "author": "Rubber Duck",
+  "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/linak-desk",
+  "categories": [
+    "productivity",
+    "hardware"
+  ],
+  "hostApiVersion": 1,
+  "ui": {
+    "entry": "ui/index.html",
+    "window": {
+      "mode": "panel",
+      "width": 340,
+      "height": 560,
+      "minWidth": 300,
+      "minHeight": 420,
+      "resizable": true,
+      "alwaysOnTop": false,
+      "decorations": true,
+      "transparent": false
+    }
+  },
+  "actions": [
+    {
+      "id": "toggle_sit_stand",
+      "label": "Toggle sit/stand"
+    },
+    {
+      "id": "sit",
+      "label": "Sit"
+    },
+    {
+      "id": "stand",
+      "label": "Stand"
+    }
+  ],
+  "sidecars": [
+    {
+      "platform": "macos-arm64",
+      "path": "bin/linak-desk",
+      "sha256": "72ab6002f00a17f39881cdc5b0e0b34f8abc4ee7b72eec1f208531e890204ca3"
+    }
+  ],
+  "permissions": [
+    "usb",
+    "notifications"
+  ]
+}
