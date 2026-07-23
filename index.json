@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-23T15:05:31.896Z",
+  "generatedAt": "2026-07-23T15:51:44.580Z",
   "plugins": [
     {
       "id": "hello-duck",
@@ -41,7 +41,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc1.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc2.png"
       ],
-      "latest": "0.1.0",
+      "latest": "0.1.1",
       "versions": [
         {
           "version": "0.1.0",
@@ -54,6 +54,19 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/linak-desk-v0.1.0/linak-desk-0.1.0.duckplug",
             "sha256": "73c65f09b57bdbb167a3ba8860b64dcada65ae0a946705a392129fc4eb244f67",
             "size": 1887913
+          }
+        },
+        {
+          "version": "0.1.1",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-23T15:51:44.572Z",
+          "platforms": [
+            "macos-arm64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/linak-desk-v0.1.1/linak-desk-0.1.1.duckplug",
+            "sha256": "6deb414b2d8135a108922875bc6b1ae689a5334b05afa55f9461755e53b8695f",
+            "size": 1888138
           }
         }
       ]

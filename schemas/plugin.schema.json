@@ -66,7 +66,16 @@
             "alwaysOnTop": { "type": "boolean" },
             "decorations": { "type": "boolean" },
             "transparent": { "type": "boolean" },
-            "title": { "type": "string" }
+            "title": { "type": "string" },
+            "titleBarStyle": {
+              "type": "string",
+              "enum": ["visible", "transparent", "overlay"],
+              "description": "macOS title-bar style. 'overlay' floats the traffic-light controls over the content."
+            },
+            "hiddenTitle": {
+              "type": "boolean",
+              "description": "macOS only: hide the window title text (pairs well with 'overlay')."
+            }
           }
         }
       }
