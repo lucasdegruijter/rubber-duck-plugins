@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-23T12:42:00.247Z",
+  "generatedAt": "2026-07-23T13:00:49.154Z",
   "plugins": [
     {
       "id": "hello-duck",
@@ -48,8 +48,8 @@
           ],
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.1.0/pr-monitor-0.1.0.duckplug",
-            "sha256": "93b9a619c174ed941e66eeaf3ac6ef0ccee4b74801a22f3aed95217fd24fe0fc",
-            "size": 4320414
+            "sha256": "dc11d3bb0bf61781adff40f4c45ecbf618bceecf6122ec82ca2f32af4b4913fa",
+            "size": 4285246
           }
         }
       ]
