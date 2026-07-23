@@ -13,10 +13,12 @@ import {
   REPO,
   ROOT,
   listPluginIds,
+  rawUrl,
   readJson,
   sha256File,
   validateIndex,
   validateManifest,
+  validateStore,
 } from './lib.mjs'
 
 const INDEX_PATH = join(ROOT, 'index.json')
@@ -34,6 +36,25 @@ function packageInfo(id, version, previous) {
   }
   if (previous?.package) return previous.package
   return null
+}
+
+/** Optional per-plugin marketing metadata merged into the catalog entry. */
+function storeMetadata(id) {
+  const path = join(PLUGINS_DIR, id, 'store.json')
+  if (!existsSync(path)) return {}
+  const store = readJson(path)
+  validateStore(store, `plugins/${id}/store.json`)
+  const out = {}
+  if (store.longDescription) out.longDescription = store.longDescription
+  if (store.screenshots?.length) {
+    for (const rel of store.screenshots) {
+      if (!existsSync(join(PLUGINS_DIR, id, rel))) {
+        throw new Error(`plugins/${id}/store.json: screenshot "${rel}" not found on disk.`)
+      }
+    }
+    out.screenshots = store.screenshots.map((rel) => rawUrl(`plugins/${id}/${rel}`))
+  }
+  return out
 }
 
 function loadPreviousVersions() {
@@ -103,6 +124,7 @@ function main() {
     )
     if (versions.length === 0) continue
 
+    const store = storeMetadata(id)
     plugins.push({
       id,
       name: manifest.name,
@@ -111,6 +133,8 @@ function main() {
       ...(manifest.homepage ? { homepage: manifest.homepage } : {}),
       ...(manifest.icon ? { icon: manifest.icon } : {}),
       ...(manifest.categories ? { categories: manifest.categories } : {}),
+      ...(store.longDescription ? { longDescription: store.longDescription } : {}),
+      ...(store.screenshots ? { screenshots: store.screenshots } : {}),
       latest: versions[versions.length - 1].version,
       versions,
     })

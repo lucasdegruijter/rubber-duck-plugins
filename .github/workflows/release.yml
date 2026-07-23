@@ -1,0 +1,81 @@
+name: release
+
+# Packs every plugin under plugins/ into a .duckplug, publishes it as a GitHub
+# Release asset, then regenerates index.json (with package sha256/size + store
+# metadata) and commits it back to main. Runs whenever plugin source changes.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'plugins/**'
+      - 'tools/**'
+      - 'schemas/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      PLUGINS_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Validate plugin manifests
+        run: pnpm validate
+
+      - name: Pack and publish new plugin versions
+        run: |
+          set -euo pipefail
+          for dir in plugins/*/; do
+            id="$(basename "$dir")"
+            [ -f "$dir/plugin.json" ] || continue
+            ver="$(node -p "require('./plugins/$id/plugin.json').version")"
+            tag="$id-v$ver"
+            if gh release view "$tag" >/dev/null 2>&1; then
+              echo "Release $tag already published — skipping (published asset is authoritative)."
+              continue
+            fi
+            echo "Packing and releasing $tag."
+            node tools/pack.mjs "$id"
+            gh release create "$tag" "dist/$id-$ver.duckplug" \
+              --title "$id v$ver" \
+              --notes "Automated release of \`$id\` v$ver."
+          done
+
+      - name: Regenerate index.json
+        run: node tools/build-index.mjs
+
+      - name: Commit index if changed
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain index.json README.md)" ]; then
+            echo "index.json already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.json README.md
+          git commit -m "Regenerate index.json [skip ci]"
+          git push

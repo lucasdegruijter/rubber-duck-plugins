@@ -14,6 +14,15 @@ export const SCHEMAS_DIR = join(ROOT, 'schemas')
 /** Publisher/repo used to build release-asset download URLs. */
 export const REPO = process.env.PLUGINS_REPO ?? 'lucasdegruijter/rubber-duck-plugins'
 
+/** Branch raw assets (screenshots, icons) are served from. */
+export const RAW_REF = process.env.PLUGINS_RAW_REF ?? 'main'
+
+/** Build a raw.githubusercontent.com URL for a repo-relative path. */
+export function rawUrl(relPath) {
+  const clean = relPath.split('/').map(encodeURIComponent).join('/')
+  return `https://raw.githubusercontent.com/${REPO}/${RAW_REF}/${clean}`
+}
+
 export function readJson(path) {
   return JSON.parse(readFileSync(path, 'utf8'))
 }
@@ -51,6 +60,7 @@ function validators() {
   _validators = {
     manifest: ajv.compile(readJson(join(SCHEMAS_DIR, 'plugin.schema.json'))),
     index: ajv.compile(readJson(join(SCHEMAS_DIR, 'index.schema.json'))),
+    store: ajv.compile(readJson(join(SCHEMAS_DIR, 'store.schema.json'))),
   }
   return _validators
 }
@@ -72,5 +82,13 @@ export function validateIndex(index) {
   const validate = validators().index
   if (!validate(index)) {
     throw new Error(`Invalid index.json:\n${formatErrors(validate.errors)}`)
+  }
+}
+
+/** Validate a store-metadata object; throws with a readable message on failure. */
+export function validateStore(store, label = 'store.json') {
+  const validate = validators().store
+  if (!validate(store)) {
+    throw new Error(`Invalid ${label}:\n${formatErrors(validate.errors)}`)
   }
 }

@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/lucasdegruijter/rubber-duck-plugins/schemas/store.schema.json",
+  "title": "Rubber Duck plugin store metadata",
+  "description": "Optional marketing metadata (store.json) for a plugin. Lives next to plugin.json and is merged into index.json by the build tooling. Screenshot assets are committed under the plugin folder and are NOT shipped inside the .duckplug package.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "longDescription": {
+      "type": "string",
+      "description": "Extended store description in Markdown, shown on the plugin detail view."
+    },
+    "screenshots": {
+      "type": "array",
+      "description": "Screenshot image paths relative to the plugin folder (e.g. screenshots/1.png). Resolved to raw repo URLs in the generated index.",
+      "items": {
+        "type": "string",
+        "pattern": "^[^/].*\\.(png|jpg|jpeg|webp|gif)$"
+      },
+      "uniqueItems": true
+    }
+  }
+}

@@ -39,6 +39,15 @@
             "items": { "type": "string" },
             "uniqueItems": true
           },
+          "longDescription": {
+            "type": "string",
+            "description": "Extended store description (Markdown), shown on the plugin detail view."
+          },
+          "screenshots": {
+            "type": "array",
+            "description": "Absolute URLs to store screenshots, in display order.",
+            "items": { "type": "string", "format": "uri" }
+          },
           "latest": {
             "type": "string",
             "description": "Version string of the newest entry in versions[].",

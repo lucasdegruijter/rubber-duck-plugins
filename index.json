@@ -1,6 +1,58 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "1970-01-01T00:00:00.000Z",
-  "plugins": []
+  "generatedAt": "2026-07-23T12:42:00.247Z",
+  "plugins": [
+    {
+      "id": "hello-duck",
+      "name": "Hello Duck",
+      "description": "Minimal example plugin — a template for building your own Rubber Duck plugin.",
+      "author": "Rubber Duck",
+      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/hello-duck",
+      "categories": [
+        "fun"
+      ],
+      "latest": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-23T12:42:00.238Z",
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/hello-duck-v1.0.0/hello-duck-1.0.0.duckplug",
+            "sha256": "fc793d9b4b4232c21c18f36ce0de3132d5f9d8ae4380bfed97e131cd05bbe288",
+            "size": 1305
+          }
+        }
+      ]
+    },
+    {
+      "id": "pr-monitor",
+      "name": "PR Monitor",
+      "description": "Monitor your GitHub pull requests, CI status, and review requests from the menu bar.",
+      "author": "Rubber Duck",
+      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/pr-monitor",
+      "categories": [
+        "development",
+        "monitoring"
+      ],
+      "longDescription": "**PR Monitor** keeps your GitHub review workflow in the menu bar, so you always know what needs your attention without leaving your editor.\n\n### Highlights\n\n- **Live pull-request tracking** — your open PRs, review requests, and assigned work, refreshed automatically in the background.\n- **CI at a glance** — the tray badge turns amber or red the moment a check starts failing, and green when everything passes.\n- **Flakiness-aware** — configurable rules dampen known-flaky checks so a flapping job doesn't cry wolf.\n- **Quick actions** — snooze, hide, or jump straight to a PR from the panel.\n- **Native menu-bar panel** — a frameless, always-on-top window that follows your app theme and translucency.\n\n### Setup\n\nAdd a GitHub personal access token in the plugin's settings and pick which repositories or search filters to watch. PR Monitor polls on an interval you control and only surfaces what's relevant to you.\n\nAll data stays local to your machine — the plugin talks directly to the GitHub API and stores its settings in your Rubber Duck data directory.",
+      "latest": "0.1.0",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-23T12:42:00.242Z",
+          "platforms": [
+            "macos-arm64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.1.0/pr-monitor-0.1.0.duckplug",
+            "sha256": "93b9a619c174ed941e66eeaf3ac6ef0ccee4b74801a22f3aed95217fd24fe0fc",
+            "size": 4320414
+          }
+        }
+      ]
+    }
+  ]
 }

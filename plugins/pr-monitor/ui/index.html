@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4f46e5" />
+    <title>PR Monitor</title>
+    <script>
+      // Pre-paint theme to avoid a light flash before settings load. Defaults to
+      // the OS appearance; the app corrects this once persisted settings arrive.
+      document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    </script>
+    <script type="module" crossorigin src="./assets/index-C79VTZkI.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-t8y1sNCm.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
