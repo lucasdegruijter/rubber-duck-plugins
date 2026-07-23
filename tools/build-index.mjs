@@ -142,10 +142,18 @@ function main() {
 
   plugins.sort((a, b) => a.id.localeCompare(b.id))
 
+  // Keep the timestamp stable when the catalog content is unchanged, so reruns
+  // (and CI) don't produce spurious diffs.
+  const existing = existsSync(INDEX_PATH) ? readJson(INDEX_PATH) : null
+  const unchanged =
+    existing && JSON.stringify(existing.plugins ?? []) === JSON.stringify(plugins)
+  const generatedAt =
+    unchanged && existing.generatedAt ? existing.generatedAt : new Date().toISOString()
+
   const index = {
     $schema: './schemas/index.schema.json',
     indexVersion: 1,
-    generatedAt: new Date().toISOString(),
+    generatedAt,
     plugins,
   }
   validateIndex(index)
