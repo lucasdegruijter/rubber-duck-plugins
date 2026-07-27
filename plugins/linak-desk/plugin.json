@@ -1,11 +1,9 @@
 {
-  "$schema": "../../schemas/plugin.schema.json",
   "id": "linak-desk",
   "name": "LINAK Desk",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Control your LINAK sit/stand desk with keyboard shortcuts and sit/stand reminders.",
   "author": "Rubber Duck",
-  "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/linak-desk",
   "categories": [
     "productivity",
     "hardware"

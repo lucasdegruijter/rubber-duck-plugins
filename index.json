@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-23T15:51:44.580Z",
+  "generatedAt": "2026-07-27T14:24:21.156Z",
   "plugins": [
     {
       "id": "hello-duck",
@@ -31,7 +31,6 @@
       "name": "LINAK Desk",
       "description": "Control your LINAK sit/stand desk with keyboard shortcuts and sit/stand reminders.",
       "author": "Rubber Duck",
-      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/linak-desk",
       "categories": [
         "productivity",
         "hardware"
@@ -41,7 +40,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc1.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc2.png"
       ],
-      "latest": "0.1.1",
+      "latest": "0.2.0",
       "versions": [
         {
           "version": "0.1.0",
@@ -68,6 +67,41 @@
             "sha256": "6deb414b2d8135a108922875bc6b1ae689a5334b05afa55f9461755e53b8695f",
             "size": 1888138
           }
+        },
+        {
+          "version": "0.2.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-27T14:24:21.147Z",
+          "platforms": [
+            "macos-arm64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/linak-desk-v0.2.0/linak-desk-0.2.0.duckplug",
+            "sha256": "d76eb4fe1096736c26cd4dcc184db5c249a0e24c87a883f7bcdb073709a679b7",
+            "size": 1888521
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting-cost",
+      "name": "Meeting Cost Meter",
+      "description": "A live meter that tallies what a meeting is costing in euros, based on who is in the room.",
+      "author": "Rubber Duck",
+      "categories": [
+        "productivity"
+      ],
+      "latest": "0.2.0",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-27T14:24:21.153Z",
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/meeting-cost-v0.2.0/meeting-cost-0.2.0.duckplug",
+            "sha256": "fc81577cd54817573b4ab620fb56aa188a977e78b5228bfaffc0f86a67913355",
+            "size": 1236082
+          }
         }
       ]
     },
@@ -76,7 +110,6 @@
       "name": "PR Monitor",
       "description": "Monitor your GitHub pull requests, CI status, and review requests from the menu bar.",
       "author": "Rubber Duck",
-      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/pr-monitor",
       "categories": [
         "development",
         "monitoring"
@@ -87,7 +120,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc2.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc3.png"
       ],
-      "latest": "0.1.0",
+      "latest": "0.2.0",
       "versions": [
         {
           "version": "0.1.0",
@@ -100,6 +133,19 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.1.0/pr-monitor-0.1.0.duckplug",
             "sha256": "dc11d3bb0bf61781adff40f4c45ecbf618bceecf6122ec82ca2f32af4b4913fa",
             "size": 4285246
+          }
+        },
+        {
+          "version": "0.2.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-27T14:24:21.156Z",
+          "platforms": [
+            "macos-arm64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.2.0/pr-monitor-0.2.0.duckplug",
+            "sha256": "0c1e4f3218ddc0689a30dc60c30904aa6e87b2a96596158306feaf70e693239f",
+            "size": 4898694
           }
         }
       ]

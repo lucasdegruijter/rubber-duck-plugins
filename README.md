@@ -93,8 +93,9 @@ CI runs `pnpm validate` on every push and pull request (see
 | Plugin | ID | Latest | Categories | Description |
 | ------ | -- | ------ | ---------- | ----------- |
 | **Hello Duck** | `hello-duck` | 1.0.0 | fun | Minimal example plugin — a template for building your own Rubber Duck plugin. |
-| **LINAK Desk** | `linak-desk` | 0.1.1 | productivity, hardware | Control your LINAK sit/stand desk with keyboard shortcuts and sit/stand reminders. |
-| **PR Monitor** | `pr-monitor` | 0.1.0 | development, monitoring | Monitor your GitHub pull requests, CI status, and review requests from the menu bar. |
+| **LINAK Desk** | `linak-desk` | 0.2.0 | productivity, hardware | Control your LINAK sit/stand desk with keyboard shortcuts and sit/stand reminders. |
+| **Meeting Cost Meter** | `meeting-cost` | 0.2.0 | productivity | A live meter that tallies what a meeting is costing in euros, based on who is in the room. |
+| **PR Monitor** | `pr-monitor` | 0.2.0 | development, monitoring | Monitor your GitHub pull requests, CI status, and review requests from the menu bar. |
 <!-- END CATALOG -->
 
 ## Contributing
