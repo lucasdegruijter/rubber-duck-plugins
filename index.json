@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-23T15:51:44.580Z",
+  "generatedAt": "2026-07-27T14:58:21.031Z",
   "plugins": [
     {
       "id": "hello-duck",
@@ -41,7 +41,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc1.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc2.png"
       ],
-      "latest": "0.1.1",
+      "latest": "0.2.0",
       "versions": [
         {
           "version": "0.1.0",
@@ -68,6 +68,43 @@
             "sha256": "6deb414b2d8135a108922875bc6b1ae689a5334b05afa55f9461755e53b8695f",
             "size": 1888138
           }
+        },
+        {
+          "version": "0.2.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-27T14:24:21.147Z",
+          "platforms": [
+            "macos-arm64",
+            "windows-x64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/linak-desk-v0.2.0/linak-desk-0.2.0.duckplug",
+            "sha256": "d900148730161f9986030f0580ecf4e2bbba549b9321d7c0a42d247c360d02c2",
+            "size": 2299705
+          }
+        }
+      ]
+    },
+    {
+      "id": "meeting-cost",
+      "name": "Meeting Cost Meter",
+      "description": "A live meter that tallies what a meeting is costing in euros, based on who is in the room.",
+      "author": "Rubber Duck",
+      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/meeting-cost",
+      "categories": [
+        "productivity"
+      ],
+      "latest": "0.2.0",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-27T14:24:21.153Z",
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/meeting-cost-v0.2.0/meeting-cost-0.2.0.duckplug",
+            "sha256": "d0a50f0c8151849920e70b65a3160baae32d8f0088b18a53d413847ab5c139c1",
+            "size": 1236198
+          }
         }
       ]
     },
@@ -87,7 +124,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc2.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc3.png"
       ],
-      "latest": "0.1.0",
+      "latest": "0.2.0",
       "versions": [
         {
           "version": "0.1.0",
@@ -100,6 +137,20 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.1.0/pr-monitor-0.1.0.duckplug",
             "sha256": "dc11d3bb0bf61781adff40f4c45ecbf618bceecf6122ec82ca2f32af4b4913fa",
             "size": 4285246
+          }
+        },
+        {
+          "version": "0.2.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-27T14:24:21.156Z",
+          "platforms": [
+            "macos-arm64",
+            "windows-x64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.2.0/pr-monitor-0.2.0.duckplug",
+            "sha256": "5ce8e6deb5d7caae8a8f77fa414a082f336045f8063c6ca0fda0f951094a9db4",
+            "size": 7783044
           }
         }
       ]
