@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-27T14:24:21.156Z",
+  "generatedAt": "2026-07-27T14:43:16.038Z",
   "plugins": [
     {
       "id": "hello-duck",
@@ -73,12 +73,13 @@
           "hostApiVersion": 1,
           "publishedAt": "2026-07-27T14:24:21.147Z",
           "platforms": [
-            "macos-arm64"
+            "macos-arm64",
+            "windows-x64"
           ],
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/linak-desk-v0.2.0/linak-desk-0.2.0.duckplug",
-            "sha256": "d76eb4fe1096736c26cd4dcc184db5c249a0e24c87a883f7bcdb073709a679b7",
-            "size": 1888521
+            "sha256": "7a0d53f061dc25acabdf22301dbf9535e47c786b128defb31700214f8c13e4b8",
+            "size": 2299638
           }
         }
       ]
@@ -140,12 +141,13 @@
           "hostApiVersion": 1,
           "publishedAt": "2026-07-27T14:24:21.156Z",
           "platforms": [
-            "macos-arm64"
+            "macos-arm64",
+            "windows-x64"
           ],
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.2.0/pr-monitor-0.2.0.duckplug",
-            "sha256": "0c1e4f3218ddc0689a30dc60c30904aa6e87b2a96596158306feaf70e693239f",
-            "size": 4898694
+            "sha256": "463dc6ae97565e729012b5e8a06627759c5bc077a63d2939a604fe90b3afe262",
+            "size": 7782925
           }
         }
       ]

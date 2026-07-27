@@ -44,6 +44,11 @@
       "platform": "macos-arm64",
       "path": "bin/linak-desk",
       "sha256": "72ab6002f00a17f39881cdc5b0e0b34f8abc4ee7b72eec1f208531e890204ca3"
+    },
+    {
+      "platform": "windows-x64",
+      "path": "bin/linak-desk.exe",
+      "sha256": "dd78da74a6e5831c67955a6ddd147d69a32630ec77a81e520db700936aa0ae0d"
     }
   ],
   "permissions": [

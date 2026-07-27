@@ -28,6 +28,11 @@
       "platform": "macos-arm64",
       "path": "bin/pr-monitor",
       "sha256": "fd4fa7ee50f2dc3bcb7d45b0866f34fc402c623d47919c9f831c12ed90e62f5f"
+    },
+    {
+      "platform": "windows-x64",
+      "path": "bin/pr-monitor.exe",
+      "sha256": "d51ee07fa175f4bf1781d443acfd9c67aab617ee4fbe454db1f537cc5ae5cdf6"
     }
   ],
   "permissions": []
