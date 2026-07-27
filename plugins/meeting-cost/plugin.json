@@ -1,9 +1,11 @@
 {
+  "$schema": "../../schemas/plugin.schema.json",
   "id": "meeting-cost",
   "name": "Meeting Cost Meter",
   "version": "0.2.0",
   "description": "A live meter that tallies what a meeting is costing in euros, based on who is in the room.",
   "author": "Rubber Duck",
+  "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/meeting-cost",
   "categories": [
     "productivity"
   ],

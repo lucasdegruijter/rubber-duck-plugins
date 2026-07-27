@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-27T14:43:16.038Z",
+  "generatedAt": "2026-07-27T14:58:21.031Z",
   "plugins": [
     {
       "id": "hello-duck",
@@ -31,6 +31,7 @@
       "name": "LINAK Desk",
       "description": "Control your LINAK sit/stand desk with keyboard shortcuts and sit/stand reminders.",
       "author": "Rubber Duck",
+      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/linak-desk",
       "categories": [
         "productivity",
         "hardware"
@@ -78,8 +79,8 @@
           ],
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/linak-desk-v0.2.0/linak-desk-0.2.0.duckplug",
-            "sha256": "7a0d53f061dc25acabdf22301dbf9535e47c786b128defb31700214f8c13e4b8",
-            "size": 2299638
+            "sha256": "d900148730161f9986030f0580ecf4e2bbba549b9321d7c0a42d247c360d02c2",
+            "size": 2299705
           }
         }
       ]
@@ -89,6 +90,7 @@
       "name": "Meeting Cost Meter",
       "description": "A live meter that tallies what a meeting is costing in euros, based on who is in the room.",
       "author": "Rubber Duck",
+      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/meeting-cost",
       "categories": [
         "productivity"
       ],
@@ -100,8 +102,8 @@
           "publishedAt": "2026-07-27T14:24:21.153Z",
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/meeting-cost-v0.2.0/meeting-cost-0.2.0.duckplug",
-            "sha256": "fc81577cd54817573b4ab620fb56aa188a977e78b5228bfaffc0f86a67913355",
-            "size": 1236082
+            "sha256": "d0a50f0c8151849920e70b65a3160baae32d8f0088b18a53d413847ab5c139c1",
+            "size": 1236198
           }
         }
       ]
@@ -111,6 +113,7 @@
       "name": "PR Monitor",
       "description": "Monitor your GitHub pull requests, CI status, and review requests from the menu bar.",
       "author": "Rubber Duck",
+      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/pr-monitor",
       "categories": [
         "development",
         "monitoring"
@@ -146,8 +149,8 @@
           ],
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.2.0/pr-monitor-0.2.0.duckplug",
-            "sha256": "463dc6ae97565e729012b5e8a06627759c5bc077a63d2939a604fe90b3afe262",
-            "size": 7782925
+            "sha256": "5ce8e6deb5d7caae8a8f77fa414a082f336045f8063c6ca0fda0f951094a9db4",
+            "size": 7783044
           }
         }
       ]

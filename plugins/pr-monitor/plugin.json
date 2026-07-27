@@ -1,9 +1,11 @@
 {
+  "$schema": "../../schemas/plugin.schema.json",
   "id": "pr-monitor",
   "name": "PR Monitor",
   "version": "0.2.0",
   "description": "Monitor your GitHub pull requests, CI status, and review requests from the menu bar.",
   "author": "Rubber Duck",
+  "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/pr-monitor",
   "categories": [
     "development",
     "monitoring"
