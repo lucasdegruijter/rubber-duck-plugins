@@ -34,7 +34,7 @@
     {
       "platform": "windows-x64",
       "path": "bin/pr-monitor.exe",
-      "sha256": "d51ee07fa175f4bf1781d443acfd9c67aab617ee4fbe454db1f537cc5ae5cdf6"
+      "sha256": "44e59449ac5419db446b7005de3ff30d97284185ff0b0de724ebeab0d2bb26ea"
     }
   ],
   "permissions": []
