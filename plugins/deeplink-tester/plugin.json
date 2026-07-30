@@ -2,7 +2,7 @@
   "$schema": "../../schemas/plugin.schema.json",
   "id": "deeplink-tester",
   "name": "Deep Link Tester",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Claim URL schemes like tel: for Rubber Duck, fire deep links by hand and watch the payloads land in a live log.",
   "author": "Rubber Duck",
   "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/deeplink-tester",

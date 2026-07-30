@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-30T09:35:25.598Z",
+  "generatedAt": "2026-07-30T13:41:54.888Z",
   "plugins": [
     {
       "id": "deeplink-tester",
@@ -18,7 +18,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/deeplink-tester/screenshots/sc1.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/deeplink-tester/screenshots/sc2.png"
       ],
-      "latest": "0.3.0",
+      "latest": "0.3.1",
       "versions": [
         {
           "version": "0.3.0",
@@ -28,6 +28,16 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/deeplink-tester-v0.3.0/deeplink-tester-0.3.0.duckplug",
             "sha256": "f041161b8a3b6e609abf6914c9701953f2fb128b4f2697ccda11b7bf7cbb2199",
             "size": 1544553
+          }
+        },
+        {
+          "version": "0.3.1",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-30T13:37:49.275Z",
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/deeplink-tester-v0.3.1/deeplink-tester-0.3.1.duckplug",
+            "sha256": "394069fd8ecaf275340267a62f0d230f0c1ecc9fd5eb4cc918b58609200621f4",
+            "size": 1544020
           }
         }
       ]
@@ -108,8 +118,8 @@
           ],
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/linak-desk-v0.2.0/linak-desk-0.2.0.duckplug",
-            "sha256": "83d909c5091ba9f224badff80b18648bb20a80c0cdc52098a0fc33c74d51ff6a",
-            "size": 2293799
+            "sha256": "d900148730161f9986030f0580ecf4e2bbba549b9321d7c0a42d247c360d02c2",
+            "size": 2299705
           }
         }
       ]
@@ -158,7 +168,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc3.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc4.png"
       ],
-      "latest": "0.3.0",
+      "latest": "0.3.1",
       "versions": [
         {
           "version": "0.1.0",
@@ -199,6 +209,20 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.3.0/pr-monitor-0.3.0.duckplug",
             "sha256": "03a6dfd1b6d10a851b8884ef8f5ef4035e0ddadf48d091112ed1b39d09ec8dd6",
             "size": 7699042
+          }
+        },
+        {
+          "version": "0.3.1",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-30T13:37:49.288Z",
+          "platforms": [
+            "macos-arm64",
+            "windows-x64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.3.1/pr-monitor-0.3.1.duckplug",
+            "sha256": "136aadb14d5eb2ad175bd6ca67488789584b53f73e38dd9c5b67348e9519e2c1",
+            "size": 7717709
           }
         }
       ]
