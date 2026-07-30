@@ -1,0 +1,7 @@
+{
+  "$schema": "../../schemas/store.schema.json",
+  "longDescription": "**Meeting Cost Meter** puts a running price tag on the call you are sitting in, so the room can see what another ten minutes actually costs.\n\n### Highlights\n\n- **Live ticking total** — the cost climbs in real time from the moment you start the meter, with a low–high range around the estimate.\n- **Cost per minute** — see the burn rate and elapsed time next to the total, based on how many people are in the room.\n- **Playful conversions** — the running total is also shown in coffees and team lunches, which lands better than a number.\n- **Automatic from your calendar** — opt in to macOS calendar access, or point the plugin at a published calendar URL, and the meter picks up the current meeting and its attendee count.\n- **Manual override** — bump the headcount up or down at any time when people join or drop off.\n- **Pause and reset** — stop the clock for a break and pick it back up, or clear the meter for the next meeting.\n\n### Setup\n\nOpen the panel, set the number of people, and hit start. Configure your currency and hourly rate assumptions in the plugin's settings, and grant calendar access if you want meetings detected automatically.\n\nEverything is computed locally — calendar data never leaves your machine.",
+  "screenshots": [
+    "screenshots/sc1.png"
+  ]
+}
