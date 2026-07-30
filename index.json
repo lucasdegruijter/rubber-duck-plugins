@@ -1,8 +1,37 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-27T14:58:21.031Z",
+  "generatedAt": "2026-07-30T08:33:19.121Z",
   "plugins": [
+    {
+      "id": "deeplink-tester",
+      "name": "Deep Link Tester",
+      "description": "Claim URL schemes like tel: for Rubber Duck, fire deep links by hand and watch the payloads land in a live log.",
+      "author": "Rubber Duck",
+      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/deeplink-tester",
+      "categories": [
+        "development",
+        "utilities"
+      ],
+      "longDescription": "**Deep Link Tester** turns Rubber Duck into a scratchpad for URL schemes: claim the protocols you care about, fire links by hand, and watch every payload land in a live log.\n\n### Highlights\n\n- **Live inbound log** — every deep link the app receives shows up instantly, with its scheme and target broken out and a one-click copy of the raw URL.\n- **Trigger links by hand** — type any URL and send it, so you can exercise your handler without a phone, a browser, or a test page.\n- **Quick scheme chips** — jump between `rubberduck:`, `duck:`, `deeplink:`, `tel:`, `callto:`, `sms:`, `facetime:` and `mailto:` in one tap.\n- **Protocol claiming** — see which schemes the system currently routes to Rubber Duck and which belong to another app, and claim the free ones from the panel.\n- **Full history** — earlier links stay in a timestamped list, with inbound and outbound calls marked separately.\n\n### Setup\n\nOpen the panel and start triggering links — nothing to configure. To receive links from other apps, claim the scheme you want from the protocols view.\n\nOn macOS an app can only handle protocols its bundle declares, so the list is fixed at build time. Claiming rewires the system default; pick the original app again in its own settings to hand it back.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/deeplink-tester/screenshots/sc1.png",
+        "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/deeplink-tester/screenshots/sc2.png"
+      ],
+      "latest": "0.3.0",
+      "versions": [
+        {
+          "version": "0.3.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-30T08:33:19.108Z",
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/deeplink-tester-v0.3.0/deeplink-tester-0.3.0.duckplug",
+            "sha256": "f041161b8a3b6e609abf6914c9701953f2fb128b4f2697ccda11b7bf7cbb2199",
+            "size": 1544553
+          }
+        }
+      ]
+    },
     {
       "id": "hello-duck",
       "name": "Hello Duck",
@@ -94,6 +123,10 @@
       "categories": [
         "productivity"
       ],
+      "longDescription": "**Meeting Cost Meter** puts a running price tag on the call you are sitting in, so the room can see what another ten minutes actually costs.\n\n### Highlights\n\n- **Live ticking total** — the cost climbs in real time from the moment you start the meter, with a low–high range around the estimate.\n- **Cost per minute** — see the burn rate and elapsed time next to the total, based on how many people are in the room.\n- **Playful conversions** — the running total is also shown in coffees and team lunches, which lands better than a number.\n- **Automatic from your calendar** — opt in to macOS calendar access, or point the plugin at a published calendar URL, and the meter picks up the current meeting and its attendee count.\n- **Manual override** — bump the headcount up or down at any time when people join or drop off.\n- **Pause and reset** — stop the clock for a break and pick it back up, or clear the meter for the next meeting.\n\n### Setup\n\nOpen the panel, set the number of people, and hit start. Configure your currency and hourly rate assumptions in the plugin's settings, and grant calendar access if you want meetings detected automatically.\n\nEverything is computed locally — calendar data never leaves your machine.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/meeting-cost/screenshots/sc1.png"
+      ],
       "latest": "0.2.0",
       "versions": [
         {
@@ -118,13 +151,14 @@
         "development",
         "monitoring"
       ],
-      "longDescription": "**PR Monitor** keeps your GitHub review workflow in the menu bar, so you always know what needs your attention without leaving your editor.\n\n### Highlights\n\n- **Live pull-request tracking** — your open PRs, review requests, and assigned work, refreshed automatically in the background.\n- **CI at a glance** — the tray badge turns amber or red the moment a check starts failing, and green when everything passes.\n- **Flakiness-aware** — configurable rules dampen known-flaky checks so a flapping job doesn't cry wolf.\n- **Quick actions** — snooze, hide, or jump straight to a PR from the panel.\n- **Native menu-bar panel** — a frameless, always-on-top window that follows your app theme and translucency.\n\n### Setup\n\nAdd a GitHub personal access token in the plugin's settings and pick which repositories or search filters to watch. PR Monitor polls on an interval you control and only surfaces what's relevant to you.\n\nAll data stays local to your machine — the plugin talks directly to the GitHub API and stores its settings in your Rubber Duck data directory.",
+      "longDescription": "**PR Monitor** keeps your GitHub review workflow in the menu bar, so you always know what needs your attention without leaving your editor.\n\n### Highlights\n\n- **Live pull-request tracking** — your open PRs, review requests, drafts and assigned work, refreshed automatically in the background and grouped into colour-coded sections.\n- **Needs my input** — PRs where someone requested changes or left an unresolved comment are pulled into their own section, so nothing waits on you silently.\n- **CI at a glance** — the tray badge turns amber or red the moment a check starts failing, and green when everything passes.\n- **Flakiness-aware** — configurable rules dampen known-flaky checks so a flapping job doesn't cry wolf.\n- **Balanced review load** — keep a pool of teammates and see how many open review requests each of them is carrying, then send your next PR to whoever has capacity, straight from the panel or the right-click menu.\n- **Quick Look** — expand any PR for its checks, review comments and unresolved threads without opening a browser tab.\n- **Statistics** — reviews completed, PRs opened and merged, and real versus flaky CI failures, per day, week, month or total.\n- **Quick actions** — snooze, hide, request a reviewer, or jump straight to a PR from the panel.\n- **Native menu-bar panel** — a frameless, always-on-top window that follows your app theme and translucency.\n\n### Setup\n\nPR Monitor signs in through the GitHub CLI, so run `gh auth login` once and you're done. Then add the organisations you work in and pick which repositories or search filters to watch. It polls on an interval you control and only surfaces what's relevant to you.\n\nAll data stays local to your machine — the plugin talks directly to the GitHub API and stores its settings in your Rubber Duck data directory.",
       "screenshots": [
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc1.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc2.png",
-        "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc3.png"
+        "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc3.png",
+        "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc4.png"
       ],
-      "latest": "0.2.0",
+      "latest": "0.3.0",
       "versions": [
         {
           "version": "0.1.0",
@@ -151,6 +185,20 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.2.0/pr-monitor-0.2.0.duckplug",
             "sha256": "5ce8e6deb5d7caae8a8f77fa414a082f336045f8063c6ca0fda0f951094a9db4",
             "size": 7783044
+          }
+        },
+        {
+          "version": "0.3.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-07-30T08:33:19.121Z",
+          "platforms": [
+            "macos-arm64",
+            "windows-x64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.3.0/pr-monitor-0.3.0.duckplug",
+            "sha256": "b2167603292f7a62ffff1b61f78d8f6610222d205a3001f6b014060c27c60f9d",
+            "size": 7651033
           }
         }
       ]

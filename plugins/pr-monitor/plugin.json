@@ -2,7 +2,7 @@
   "$schema": "../../schemas/plugin.schema.json",
   "id": "pr-monitor",
   "name": "PR Monitor",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Monitor your GitHub pull requests, CI status, and review requests from the menu bar.",
   "author": "Rubber Duck",
   "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/pr-monitor",
@@ -29,7 +29,7 @@
     {
       "platform": "macos-arm64",
       "path": "bin/pr-monitor",
-      "sha256": "fd4fa7ee50f2dc3bcb7d45b0866f34fc402c623d47919c9f831c12ed90e62f5f"
+      "sha256": "ba64627876732b7f86bc2fd0ac543e39f450a3cba7988b2a3560d0c49a2ece03"
     },
     {
       "platform": "windows-x64",

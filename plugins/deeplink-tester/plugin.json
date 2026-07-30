@@ -1,0 +1,33 @@
+{
+  "$schema": "../../schemas/plugin.schema.json",
+  "id": "deeplink-tester",
+  "name": "Deep Link Tester",
+  "version": "0.3.0",
+  "description": "Claim URL schemes like tel: for Rubber Duck, fire deep links by hand and watch the payloads land in a live log.",
+  "author": "Rubber Duck",
+  "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/deeplink-tester",
+  "categories": [
+    "development",
+    "utilities"
+  ],
+  "hostApiVersion": 1,
+  "ui": {
+    "entry": "ui/index.html",
+    "window": {
+      "mode": "panel",
+      "width": 420,
+      "height": 660,
+      "minWidth": 360,
+      "minHeight": 480,
+      "resizable": true,
+      "alwaysOnTop": false,
+      "decorations": true,
+      "transparent": false,
+      "titleBarStyle": "overlay",
+      "hiddenTitle": true
+    }
+  },
+  "actions": [],
+  "sidecars": [],
+  "permissions": []
+}

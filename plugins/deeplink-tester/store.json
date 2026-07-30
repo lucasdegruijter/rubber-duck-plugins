@@ -1,0 +1,8 @@
+{
+  "$schema": "../../schemas/store.schema.json",
+  "longDescription": "**Deep Link Tester** turns Rubber Duck into a scratchpad for URL schemes: claim the protocols you care about, fire links by hand, and watch every payload land in a live log.\n\n### Highlights\n\n- **Live inbound log** — every deep link the app receives shows up instantly, with its scheme and target broken out and a one-click copy of the raw URL.\n- **Trigger links by hand** — type any URL and send it, so you can exercise your handler without a phone, a browser, or a test page.\n- **Quick scheme chips** — jump between `rubberduck:`, `duck:`, `deeplink:`, `tel:`, `callto:`, `sms:`, `facetime:` and `mailto:` in one tap.\n- **Protocol claiming** — see which schemes the system currently routes to Rubber Duck and which belong to another app, and claim the free ones from the panel.\n- **Full history** — earlier links stay in a timestamped list, with inbound and outbound calls marked separately.\n\n### Setup\n\nOpen the panel and start triggering links — nothing to configure. To receive links from other apps, claim the scheme you want from the protocols view.\n\nOn macOS an app can only handle protocols its bundle declares, so the list is fixed at build time. Claiming rewires the system default; pick the original app again in its own settings to hand it back.",
+  "screenshots": [
+    "screenshots/sc1.png",
+    "screenshots/sc2.png"
+  ]
+}
