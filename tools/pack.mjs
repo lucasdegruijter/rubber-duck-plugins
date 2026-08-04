@@ -34,11 +34,28 @@ function main() {
 
   // Deterministic-ish tarball: package contents relative to the plugin dir so
   // plugin.json sits at the archive root. `tar` ships on macOS, Linux and
-  // Windows 10+. Excludes any accidental nested dist output.
+  // Windows 10+. Store-listing assets and macOS metadata stay out: they are
+  // registry-only, and AppleDouble files land as junk in every install.
   execFileSync(
     'tar',
-    ['--exclude', './dist', '-czf', outPath, '-C', dir, '.'],
-    { stdio: 'inherit' },
+    [
+      '--exclude',
+      './dist',
+      '--exclude',
+      './store.json',
+      '--exclude',
+      './screenshots',
+      '--exclude',
+      '.DS_Store',
+      '--exclude',
+      '._*',
+      '-czf',
+      outPath,
+      '-C',
+      dir,
+      '.',
+    ],
+    { stdio: 'inherit', env: { ...process.env, COPYFILE_DISABLE: '1' } },
   )
 
   const sha256 = sha256File(outPath)
