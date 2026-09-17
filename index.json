@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-09-17T08:42:09.876Z",
+  "generatedAt": "2026-09-17T08:49:50.057Z",
   "plugins": [
     {
       "id": "code-tutor",
@@ -25,8 +25,8 @@
           ],
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/code-tutor-v0.3.1/code-tutor-0.3.1.duckplug",
-            "sha256": "4296dc60a133381b37a8b555a03c69b1187071a470fce5481b6459cdbf864dfa",
-            "size": 829561
+            "sha256": "5009a4fc6104177574f1c0d1978449fe2f75dbbdc39c07b365a666211c07bd35",
+            "size": 830180
           }
         }
       ]
@@ -249,8 +249,8 @@
           ],
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.3.1/pr-monitor-0.3.1.duckplug",
-            "sha256": "c91f155594b61b8cad628faaf06a640f9e5a82dba35d64c1202af7e4cb326887",
-            "size": 7283655
+            "sha256": "136aadb14d5eb2ad175bd6ca67488789584b53f73e38dd9c5b67348e9519e2c1",
+            "size": 7717709
           }
         }
       ]
