@@ -1,0 +1,57 @@
+{
+  "$schema": "../../schemas/plugin.schema.json",
+  "id": "code-tutor",
+  "name": "Code Tutor",
+  "version": "0.3.1",
+  "description": "A daily rep against code that looks right. Today's challenge, your confidence before you submit, and what the grader made of it.",
+  "author": "Rubber Duck",
+  "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/code-tutor",
+  "categories": [
+    "development",
+    "productivity"
+  ],
+  "hostApiVersion": 1,
+  "ui": {
+    "entry": "ui/index.html",
+    "window": {
+      "mode": "panel",
+      "width": 420,
+      "height": 760,
+      "minWidth": 380,
+      "minHeight": 520,
+      "resizable": true,
+      "alwaysOnTop": false,
+      "decorations": true,
+      "transparent": false,
+      "titleBarStyle": "overlay",
+      "hiddenTitle": true
+    }
+  },
+  "actions": [],
+  "sidecars": [
+    {
+      "platform": "macos-arm64",
+      "path": "bin/tutor",
+      "sha256": "3651058eef0d614ae99dd3f2064af602f9dc8f87d66f704a7864a4f54abc0a60"
+    }
+  ],
+  "permissions": [],
+  "settingsSchema": {
+    "type": "object",
+    "properties": {
+      "tutorRoot": {
+        "type": "string",
+        "title": "Tutor root",
+        "description": "Folder holding TODAY.json, tutor/ and challenges/."
+      },
+      "openCommand": {
+        "type": "array",
+        "title": "Open command",
+        "description": "Run to open a challenge folder; the path is appended as the last argument.",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
