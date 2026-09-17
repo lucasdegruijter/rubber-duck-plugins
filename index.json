@@ -1,8 +1,36 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-07-30T13:41:54.888Z",
+  "generatedAt": "2026-09-17T08:42:09.876Z",
   "plugins": [
+    {
+      "id": "code-tutor",
+      "name": "Code Tutor",
+      "description": "A daily rep against code that looks right. Today's challenge, your confidence before you submit, and what the grader made of it.",
+      "author": "Rubber Duck",
+      "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/code-tutor",
+      "categories": [
+        "development",
+        "productivity"
+      ],
+      "longDescription": "**Code Tutor** is one short rep a day against code that looks right.\n\nAI writes fluent code: good names, clean structure, plausible shape, and no guarantee it is correct. The heuristic every developer built up — code that reads well was probably thought through — stopped holding. This trains the skill that replaced it: deciding whether convincing code actually works.\n\n### Highlights\n\n- **Predict, then check** — the runner refuses to run anything until you have written your answer down. A prediction you never committed to is one you can quietly revise, which teaches nothing.\n- **Calibration, not just score** — you rate your confidence before submitting, and the panel shows how well that tracked reality. 90% accurate and well calibrated is a good reviewer; 90% accurate and overconfident is a dangerous one.\n- **Reading over writing** — most challenges are bug hunts, output predictions, code reviews with deliberate decoys, and break-it exercises. Writing from recall is the part that got cheap.\n- **Hints that cost points** — three tiers, encoded so you cannot absorb one by accident. A hinted finish always beats a skip.\n- **Spaced repetition over concepts** — a missed idea returns days later wearing a different domain and different code, never the same snippet twice.\n- **Progress worth looking at** — accuracy and calibration trends, mastery per category, and badges you cannot grind: passing a concept that beat you earlier, or a perfect rep with no hints.\n\n### Setup\n\nPoint the plugin at a tutor root: a directory holding your challenges and learning state, kept outside your work repositories. Challenges run on Node's built-in test runner with no dependencies and no install step. Grading is a Claude session you start in the challenge folder; it scores strictly, explains generously, and writes the next day's challenge.\n\nYour learning state stays on your machine.",
+      "latest": "0.3.1",
+      "versions": [
+        {
+          "version": "0.3.1",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-09-17T08:41:24.995Z",
+          "platforms": [
+            "macos-arm64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/code-tutor-v0.3.1/code-tutor-0.3.1.duckplug",
+            "sha256": "4296dc60a133381b37a8b555a03c69b1187071a470fce5481b6459cdbf864dfa",
+            "size": 829561
+          }
+        }
+      ]
+    },
     {
       "id": "deeplink-tester",
       "name": "Deep Link Tester",
@@ -221,8 +249,8 @@
           ],
           "package": {
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.3.1/pr-monitor-0.3.1.duckplug",
-            "sha256": "136aadb14d5eb2ad175bd6ca67488789584b53f73e38dd9c5b67348e9519e2c1",
-            "size": 7717709
+            "sha256": "c91f155594b61b8cad628faaf06a640f9e5a82dba35d64c1202af7e4cb326887",
+            "size": 7283655
           }
         }
       ]
