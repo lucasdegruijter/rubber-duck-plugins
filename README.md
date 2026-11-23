@@ -92,12 +92,12 @@ CI runs `pnpm validate` on every push and pull request (see
 <!-- BEGIN CATALOG -->
 | Plugin | ID | Latest | Categories | Description |
 | ------ | -- | ------ | ---------- | ----------- |
-| **Code Tutor** | `code-tutor` | 0.3.1 | development, productivity | A daily rep against code that looks right. Today's challenge, your confidence before you submit, and what the grader made of it. |
-| **Deep Link Tester** | `deeplink-tester` | 0.3.1 | development, utilities | Claim URL schemes like tel: for Rubber Duck, fire deep links by hand and watch the payloads land in a live log. |
+| **Code Tutor** | `code-tutor` | 0.4.0 | development, productivity | A daily rep against code that looks right. Today's challenge, your confidence before you submit, and what the grader made of it. |
+| **Deep Link Tester** | `deeplink-tester` | 0.4.0 | development, utilities | Claim URL schemes like tel: for Rubber Duck, fire deep links by hand and watch the payloads land in a live log. |
 | **Hello Duck** | `hello-duck` | 1.0.0 | fun | Minimal example plugin — a template for building your own Rubber Duck plugin. |
-| **LINAK Desk** | `linak-desk` | 0.2.0 | productivity, hardware | Control your LINAK sit/stand desk with keyboard shortcuts and sit/stand reminders. |
-| **Meeting Cost Meter** | `meeting-cost` | 0.2.0 | productivity | A live meter that tallies what a meeting is costing in euros, based on who is in the room. |
-| **PR Monitor** | `pr-monitor` | 0.3.1 | development, monitoring | Monitor your GitHub pull requests, CI status, and review requests from the menu bar. |
+| **LINAK Desk** | `linak-desk` | 0.4.0 | productivity, hardware | Control your LINAK sit/stand desk with keyboard shortcuts and sit/stand reminders. |
+| **Meeting Cost Meter** | `meeting-cost` | 0.4.0 | productivity | A live meter that tallies what a meeting is costing in euros, based on who is in the room. |
+| **PR Monitor** | `pr-monitor` | 0.4.0 | development, monitoring | Monitor your GitHub pull requests, CI status, and review requests from the menu bar. |
 <!-- END CATALOG -->
 
 ## Contributing

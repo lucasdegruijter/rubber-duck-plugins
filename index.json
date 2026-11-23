@@ -1,7 +1,7 @@
 {
   "$schema": "./schemas/index.schema.json",
   "indexVersion": 1,
-  "generatedAt": "2026-09-17T08:49:50.057Z",
+  "generatedAt": "2026-11-23T10:35:21.811Z",
   "plugins": [
     {
       "id": "code-tutor",
@@ -14,7 +14,7 @@
         "productivity"
       ],
       "longDescription": "**Code Tutor** is one short rep a day against code that looks right.\n\nAI writes fluent code: good names, clean structure, plausible shape, and no guarantee it is correct. The heuristic every developer built up — code that reads well was probably thought through — stopped holding. This trains the skill that replaced it: deciding whether convincing code actually works.\n\n### Highlights\n\n- **Predict, then check** — the runner refuses to run anything until you have written your answer down. A prediction you never committed to is one you can quietly revise, which teaches nothing.\n- **Calibration, not just score** — you rate your confidence before submitting, and the panel shows how well that tracked reality. 90% accurate and well calibrated is a good reviewer; 90% accurate and overconfident is a dangerous one.\n- **Reading over writing** — most challenges are bug hunts, output predictions, code reviews with deliberate decoys, and break-it exercises. Writing from recall is the part that got cheap.\n- **Hints that cost points** — three tiers, encoded so you cannot absorb one by accident. A hinted finish always beats a skip.\n- **Spaced repetition over concepts** — a missed idea returns days later wearing a different domain and different code, never the same snippet twice.\n- **Progress worth looking at** — accuracy and calibration trends, mastery per category, and badges you cannot grind: passing a concept that beat you earlier, or a perfect rep with no hints.\n\n### Setup\n\nPoint the plugin at a tutor root: a directory holding your challenges and learning state, kept outside your work repositories. Challenges run on Node's built-in test runner with no dependencies and no install step. Grading is a Claude session you start in the challenge folder; it scores strictly, explains generously, and writes the next day's challenge.\n\nYour learning state stays on your machine.",
-      "latest": "0.3.1",
+      "latest": "0.4.0",
       "versions": [
         {
           "version": "0.3.1",
@@ -27,6 +27,19 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/code-tutor-v0.3.1/code-tutor-0.3.1.duckplug",
             "sha256": "5009a4fc6104177574f1c0d1978449fe2f75dbbdc39c07b365a666211c07bd35",
             "size": 830180
+          }
+        },
+        {
+          "version": "0.4.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-11-23T10:35:21.800Z",
+          "platforms": [
+            "macos-arm64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/code-tutor-v0.4.0/code-tutor-0.4.0.duckplug",
+            "sha256": "dc61da02695bd96270b36d9ee8dd06e6db2272f1df1084eccd0621f9936dc84b",
+            "size": 830187
           }
         }
       ]
@@ -46,7 +59,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/deeplink-tester/screenshots/sc1.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/deeplink-tester/screenshots/sc2.png"
       ],
-      "latest": "0.3.1",
+      "latest": "0.4.0",
       "versions": [
         {
           "version": "0.3.0",
@@ -66,6 +79,16 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/deeplink-tester-v0.3.1/deeplink-tester-0.3.1.duckplug",
             "sha256": "394069fd8ecaf275340267a62f0d230f0c1ecc9fd5eb4cc918b58609200621f4",
             "size": 1544020
+          }
+        },
+        {
+          "version": "0.4.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-11-23T10:35:21.806Z",
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/deeplink-tester-v0.4.0/deeplink-tester-0.4.0.duckplug",
+            "sha256": "fdf2c4e849be394fad749e8ee7aafb3cfb43a88c8d9384928f630ca26d48740f",
+            "size": 1237140
           }
         }
       ]
@@ -108,7 +131,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc1.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/linak-desk/screenshots/sc2.png"
       ],
-      "latest": "0.2.0",
+      "latest": "0.4.0",
       "versions": [
         {
           "version": "0.1.0",
@@ -149,6 +172,19 @@
             "sha256": "d900148730161f9986030f0580ecf4e2bbba549b9321d7c0a42d247c360d02c2",
             "size": 2299705
           }
+        },
+        {
+          "version": "0.4.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-11-23T10:35:21.808Z",
+          "platforms": [
+            "macos-arm64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/linak-desk-v0.4.0/linak-desk-0.4.0.duckplug",
+            "sha256": "656f33cf12554c53dccc0d54d25ea759aaf38fd3972d5eebe5471376279bd618",
+            "size": 1739066
+          }
         }
       ]
     },
@@ -165,7 +201,7 @@
       "screenshots": [
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/meeting-cost/screenshots/sc1.png"
       ],
-      "latest": "0.2.0",
+      "latest": "0.4.0",
       "versions": [
         {
           "version": "0.2.0",
@@ -175,6 +211,16 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/meeting-cost-v0.2.0/meeting-cost-0.2.0.duckplug",
             "sha256": "d0a50f0c8151849920e70b65a3160baae32d8f0088b18a53d413847ab5c139c1",
             "size": 1236198
+          }
+        },
+        {
+          "version": "0.4.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-11-23T10:35:21.809Z",
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/meeting-cost-v0.4.0/meeting-cost-0.4.0.duckplug",
+            "sha256": "ab919078b7fc4144b3f028c9810d476a752e874d343423eaa5fdd70b02d5d8e9",
+            "size": 1234624
           }
         }
       ]
@@ -196,7 +242,7 @@
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc3.png",
         "https://raw.githubusercontent.com/lucasdegruijter/rubber-duck-plugins/main/plugins/pr-monitor/screenshots/sc4.png"
       ],
-      "latest": "0.3.1",
+      "latest": "0.4.0",
       "versions": [
         {
           "version": "0.1.0",
@@ -251,6 +297,19 @@
             "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.3.1/pr-monitor-0.3.1.duckplug",
             "sha256": "136aadb14d5eb2ad175bd6ca67488789584b53f73e38dd9c5b67348e9519e2c1",
             "size": 7717709
+          }
+        },
+        {
+          "version": "0.4.0",
+          "hostApiVersion": 1,
+          "publishedAt": "2026-11-23T10:35:21.810Z",
+          "platforms": [
+            "macos-arm64"
+          ],
+          "package": {
+            "url": "https://github.com/lucasdegruijter/rubber-duck-plugins/releases/download/pr-monitor-v0.4.0/pr-monitor-0.4.0.duckplug",
+            "sha256": "865e540504829cf6ce4c46180d84ecefd62a0558c2c0f4b0599b6f7a27495668",
+            "size": 3296530
           }
         }
       ]

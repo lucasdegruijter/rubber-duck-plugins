@@ -2,7 +2,7 @@
   "$schema": "../../schemas/plugin.schema.json",
   "id": "code-tutor",
   "name": "Code Tutor",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "A daily rep against code that looks right. Today's challenge, your confidence before you submit, and what the grader made of it.",
   "author": "Rubber Duck",
   "homepage": "https://github.com/lucasdegruijter/rubber-duck-plugins/tree/main/plugins/code-tutor",
@@ -32,7 +32,7 @@
     {
       "platform": "macos-arm64",
       "path": "bin/tutor",
-      "sha256": "3651058eef0d614ae99dd3f2064af602f9dc8f87d66f704a7864a4f54abc0a60"
+      "sha256": "24f71d4d249e2801cf7c9eb72bc44e8e39761bd62d54946001fc07d238d79a19"
     }
   ],
   "permissions": [],
